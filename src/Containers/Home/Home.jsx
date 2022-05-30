@@ -5,9 +5,11 @@ const Home = () => {
 
 
   return (
-           <div>
-           </div>
-         )
+    <div className="box_basic_container home" id='animItemFallingFromTop'>
+      <div className="board">
+      </div>
+    </div>
+  )
 }
 
 export default Home;

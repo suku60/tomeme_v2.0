@@ -6,7 +6,7 @@
 
 @keyframes fallFromTop {
     0% {
-        transform: translateY(-39em) ;
+        transform: translateY(-101%) ;
     }
     100% {
         transform: translateY(0em);

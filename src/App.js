@@ -7,15 +7,14 @@ import Home from './Containers/Home/Home';
 import Profile from './Containers/Profile/Profile';
 import Search from './Containers/Search/Search';
 
-import Menu from './Components/Menu/Menu';
-import Floor from './Components/Floor/Floor';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Menu
-      menuData={[
+      <Sidebar
+      sidebarData={[
         {zIndex: "4",
         name: "Home",
         path: "/home"
@@ -41,7 +40,6 @@ function App() {
           <Route path="/search" element={<Search/>}/>
           
         </Routes>
-        <Floor/>
       
       </BrowserRouter>
     </div>
