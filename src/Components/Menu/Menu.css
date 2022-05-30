@@ -8,7 +8,7 @@ ul {
     /* Main transformation: we transform all the elements 
     from he list */
 
-    transform: skewY(-7deg);
+    transform: skewY(-11deg);
 }
 
 ul li {
@@ -16,10 +16,13 @@ ul li {
     background-color: hsl(0, 0%, 50%);
     color: whitesmoke;
 
+
     list-style: none;
     padding: 1em;
+    padding-inline: 1.2em;
     
-    width: 8em;
+    width: 3.3em;
+    height: 1em;
     
     position: relative;
 
@@ -32,7 +35,7 @@ ul li {
 
     cursor: pointer;
 
-    margin-block: .8em;
+    margin-block: 1.2em;
 
 }
 
@@ -40,7 +43,7 @@ ul li:hover {
 
     background-color: hsl(145, 51%, 50%);
 
-    transform: translateX(4em);
+    transform: translate(2em) scale(1.1);
 
 }
 
@@ -86,6 +89,7 @@ ul li::after {
 }
 
 ul li:hover::after {
+
     background-color: hsl(145, 51%, 48%);
     
 }
@@ -93,8 +97,6 @@ ul li:hover::after {
 .li_text {
 
     color: whitesmoke;
-
-    cursor: pointer;
 
 }
 

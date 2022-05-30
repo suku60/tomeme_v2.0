@@ -8,6 +8,7 @@ import Profile from './Containers/Profile/Profile';
 import Search from './Containers/Search/Search';
 
 import Menu from './Components/Menu/Menu';
+import Floor from './Components/Floor/Floor';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/search" element={<Search/>}/>
           
         </Routes>
+        <Floor/>
       
       </BrowserRouter>
     </div>

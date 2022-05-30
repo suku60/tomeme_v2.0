@@ -1,0 +1,15 @@
+/* HERE WE'RE DOING THE BASIC AND COMMON CSS ANIMATIONS */
+
+#animItemFallingFromTop {
+    animation: fallFromTop 1s normal;
+}
+
+@keyframes fallFromTop {
+    0% {
+        transform: translateY(-39em) ;
+    }
+    100% {
+        transform: translateY(0em);
+    }
+}
+    
