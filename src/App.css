@@ -7,6 +7,22 @@
   width: 100vw;
 }
 
+/* GLOBAL COMMON CLASSES */
+
+/* POSITIONING */
+/* centered children */
+
+.centered_children {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* BOXES */
+
 .box_basic_container {
   
   display: flex;

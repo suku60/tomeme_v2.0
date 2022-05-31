@@ -1,5 +1,6 @@
 /* HERE WE'RE DOING THE BASIC AND COMMON CSS ANIMATIONS */
 
+/* ITEM FROM TOP TO BOTTOM */
 #animItemFallingFromTop {
     animation: fallFromTop 1s normal;
 }
@@ -7,6 +8,26 @@
 @keyframes fallFromTop {
     0% {
         transform: translateY(-101%) ;
+    }
+    100% {
+        transform: translateY(0em);
+    }
+}
+    
+
+/* ITEM FROM BOTTOM TO TOP */
+#animItemComingFromBottom {
+    animation: comeFromBottom 1s normal;
+}
+
+#fade {
+    animation: comeFromBottom 1s reverse;
+    animation-play-state: running;
+}
+
+@keyframes comeFromBottom {
+    0% {
+        transform: translateY(101%) ;
     }
     100% {
         transform: translateY(0em);

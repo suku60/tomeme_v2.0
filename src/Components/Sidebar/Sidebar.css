@@ -8,9 +8,12 @@ ul {
     margin: 0%;
     padding: 0%;
 
-    width: 15%;
-
-    margin-left: 2%;
+    width: 20%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 ul li {
@@ -51,7 +54,7 @@ ul li:hover {
 
 @media screen and (max-width: 1200px) {
     ul {
-        width: 8%;
+        width: 17.5%;
     }
 }
 

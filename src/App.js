@@ -17,7 +17,7 @@ function App() {
       sidebarData={[
         {zIndex: "4",
         name: "Home",
-        path: "/home"
+        path: "/"
         },
         {zIndex: "3",
         name: "Dashboard",
