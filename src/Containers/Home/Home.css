@@ -10,3 +10,9 @@
 
     cursor: pointer;
 }
+
+.btn_register {
+    background-color: blue;
+    
+    top: 50%;
+}
