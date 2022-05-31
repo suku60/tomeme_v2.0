@@ -1,8 +1,10 @@
 /* HERE WE'RE DOING THE BASIC AND COMMON CSS ANIMATIONS */
 
+/* -- MOVEMENT */
+
 /* ITEM FROM TOP TO BOTTOM */
 #animItemFallingFromTop {
-    animation: fallFromTop 1s normal;
+    animation: fallFromTop .5s normal;
 }
 
 @keyframes fallFromTop {
@@ -17,12 +19,7 @@
 
 /* ITEM FROM BOTTOM TO TOP */
 #animItemComingFromBottom {
-    animation: comeFromBottom 1s normal;
-}
-
-#fade {
-    animation: comeFromBottom 1s reverse;
-    animation-play-state: running;
+    animation: comeFromBottom .5s normal;
 }
 
 @keyframes comeFromBottom {
@@ -34,3 +31,18 @@
     }
 }
     
+/* -- OPACITY */
+
+/* TRANSITION FROM 0 OPACITY TO 1 */
+#animReverseFade {
+    animation: reverseFade .5s normal;
+}
+
+@keyframes reverseFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
