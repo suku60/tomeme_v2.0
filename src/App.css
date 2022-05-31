@@ -57,8 +57,8 @@
 @media screen and (max-width: 600px) {
   .board {
       margin-left: 0%;
-      left: .5%;
-      width: 99%;
+      left: 0%;
+      width: 100%;
   }
 }
 

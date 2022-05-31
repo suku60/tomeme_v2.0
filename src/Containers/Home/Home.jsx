@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Home.css';
 
 import Form from '../../Components/Form/Form';
+import Button from '../../Components/Button/Button';
 
 const Home = () => {
 
@@ -26,9 +27,7 @@ const Home = () => {
 
   return (
     <div className="box_basic_container home" id='animItemFallingFromTop'>
-      <div className="board">
         <Form displayFromParent={formState} formType={formType}/>
-      </div>
       <div className="temporaryBtn" onClick={()=>{showForm("login")}}>login</div>
       <div className="temporaryBtn btn_register" onClick={()=>{showForm("register")}}>register</div>
     </div>

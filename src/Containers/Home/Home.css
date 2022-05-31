@@ -1,3 +1,11 @@
+.home {
+    background-color: unset;
+    background-image: url("../../assets/images/home.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .temporaryBtn {
     background-color: green;
     
@@ -13,6 +21,6 @@
 
 .btn_register {
     background-color: blue;
-    
+
     top: 50%;
 }

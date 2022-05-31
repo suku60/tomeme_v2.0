@@ -1,0 +1,12 @@
+.box_button {
+    background-color: green;
+    
+    height: 5em;
+    width: 5em;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    cursor: pointer;
+}
