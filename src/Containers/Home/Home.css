@@ -1,6 +1,6 @@
 .home {
     background-color: unset;
-    background-image: url("../../assets/images/home.png");
+    background-image: url("../../assets/images/homeMemes.png");
 
     background-position: center;
     background-position-y: top;
@@ -26,7 +26,7 @@
     height: 100%;
     width: 100%;
 
-    background: linear-gradient(transparent 2%, hsl(157, 100%, 0%, .5) 45%);
+    background: linear-gradient(transparent 2%, hsl(157, 100%, 0%, .8) 45%);
 
     /* Property to erase whitespace between top and background */
     background-position-y: top;
@@ -48,18 +48,23 @@
 }
 
 .welcome_text {
-    text-align: left;
+    background-color: whitesmoke;
+
+    text-align: center;
     font-size: 3em;
     font-family: 'Oswald', sans-serif;
 
     /* position: absolçute; */
     z-index: 6;
 
+
 }
 
 .welcome_subtext {
+    background-color: whitesmoke;
 
-    width: 80%;
+
+    width: 100%;
 
     z-index: 6;
     font-family: 'Montserrat', sans-serif;
@@ -151,6 +156,10 @@
 
 /* 600PX WIDTH SCREEN ADAPTIVE MEDIA */
 @media screen and (max-width: 600px) {
+
+    .welcome_text {
+        text-align: left;
+    }
 
     .home {
         background-position-x: 55%;

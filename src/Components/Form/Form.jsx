@@ -24,12 +24,8 @@ const Form = (props) => {
 
   const [loaderDisplay, setLoaderDisplay] = useState(false);
 
-  const [userData, setUserData] = useState({
-    username: "",
-    password: ""
-  });
+  const [userData, setUserData] = useState({});
 
-  
 
   useEffect(() => {
 
@@ -40,12 +36,30 @@ const Form = (props) => {
     setFormDisplay(props.displayFromParent);
     setFormType(props.formType);
 
+    if(props.formType === "login"){
+
+      setUserData({
+        username: "",
+        password: ""
+      });
+    }
+
+    if(props.formType === "register"){
+
+      setUserData({
+        email: "",
+        username: "",
+        password: "",
+        passwordConfirmation: ""
+      });
+    }
+
   },[props.displayFromParent, props.formType]);
 
   // Handler function
 
   const fillForm = (e) => {
-    //Set data
+
     setUserData({ ...userData, [e.target.name]: e.target.value })
 
   }
@@ -118,8 +132,10 @@ const Form = (props) => {
         console.log("Server error", loginError)
       }
     }
-  }
 
+  }
+  console.log("userdata:", userData)
+  
 switch(formType){
 
   case "register":
@@ -129,10 +145,30 @@ switch(formType){
         <button className="close_form_button centered_children" onClick={()=>{setFormDisplay("none")}}>X</button>
         <form className='centered_children'>
           <h1>Create your account</h1>
-          <input type="text" name="email" placeholder="email" required/>
-          <input type="text" name="username" placeholder="username" required/>
-          <input type="password" name="password" placeholder="password" required/>
-          <input type="password" name="confirmation" placeholder="confirm your password" required/>
+          <input 
+          onChange={(e) => { fillForm(e) }} 
+          type="text" 
+          name="email" 
+          placeholder="email" 
+          required/>
+          <input 
+          onChange={(e) => { fillForm(e) }} 
+          type="text" 
+          name="username" 
+          placeholder="username" 
+          required/>
+          <input 
+          onChange={(e) => { fillForm(e) }} 
+          type="password" 
+          name="password" 
+          placeholder="password" 
+          required/>
+          <input 
+          onChange={(e) => { fillForm(e) }} 
+          type="password" 
+          name="confirmation" 
+          placeholder="confirm your password" 
+          required/>
           <p>By clicking Register, you'll agree you are over 18 and our <a href="https://blank.page/">Privacy Policy</a>.</p>
           <button 
           className='form_button' 
@@ -153,18 +189,20 @@ switch(formType){
           <form className='centered_children'>
             <h1>Login with your account</h1>
             <input 
+          onChange={(e) => { fillForm(e) }} 
             type="text" 
             name="username" 
             placeholder="username" 
             required/>
             <input 
+          onChange={(e) => { fillForm(e) }} 
             type="password"
              name="password" 
             placeholder="password" 
             required/>
-            <button 
+            <div 
             className='form_button' 
-            onClick={()=>{}}>Login</button>
+            onClick={() => Login()}>Login</div>
           </form>
         </div>
       </div>
@@ -182,23 +220,27 @@ switch(formType){
         className="close_form_button centered_children" 
         onClick={()=>{setFormDisplay("none")}}>X</button>
         <form className='centered_children'>
-          <h1>Create your account</h1>
+          <h1>Create your account DEFAULT</h1>
           <input 
+          onChange={(e) => { fillForm(e) }} 
           type="text" 
           name="email" 
           placeholder="email" 
           required/>
           <input 
+          onChange={(e) => { fillForm(e) }} 
           type="text" 
           name="username" 
           placeholder="username" 
           required/>
           <input 
+          onChange={(e) => { fillForm(e) }} 
           type="password" 
           name="password" 
           placeholder="password" 
           required/>
           <input 
+          onChange={(e) => { fillForm(e) }} 
           type="password" 
           name="confirmation" 
           placeholder="confirm your password" 
