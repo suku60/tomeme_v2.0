@@ -26,12 +26,14 @@ const Home = () => {
     <div className="box_basic_container home" id='animReverseFade'>
       <div className="background_sides"></div>
       <div className="background_cover"></div>
-      <h1 className="welcome_text">Your daily dose of shitposting</h1>
-      <h2 className="welcome_subtext subtext_quote">- Albert Mandela</h2>
-      <h2 className="welcome_subtext subtext_join">Join the family</h2>
       <Form displayFromParent={formState} formType={formType}/>
-      <div className="temporaryBtn centered_children" onClick={()=>{showForm("login")}}>login</div>
-      <div className="temporaryBtn btn_register centered_children" onClick={()=>{showForm("register")}}>register</div>
+      <div className="box_home_container">
+        <h1 className="welcome_text">Your daily dose of shitposting</h1>
+        <h2 className="welcome_subtext subtext_quote">- Albert Mandela</h2>
+        <h2 className="welcome_subtext subtext_join">Join the family</h2>
+        <div className="temporaryBtn centered_children" onClick={()=>{showForm("login")}}>login</div>
+        <div className="temporaryBtn btn_register centered_children" onClick={()=>{showForm("register")}}>register</div>
+      </div>
     </div>
   )
 }
