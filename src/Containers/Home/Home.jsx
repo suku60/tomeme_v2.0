@@ -11,16 +11,13 @@ const Home = () => {
 
   const showForm = (loginOrRegisterForm) => {
 
-    console.log("1")
     setFormType(loginOrRegisterForm);
 
     if (!formState) {
       setFormState(true);
-    console.log("2")
 
     }else{
       setFormState(false);
-    console.log("3")
 
     }
   }

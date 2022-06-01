@@ -26,7 +26,7 @@
     height: 100%;
     width: 100%;
 
-    background-color: hsl(157, 100%, 49%, .5);
+    background: linear-gradient(transparent 1%, hsl(157, 100%, 0%, .5) 25%);
 
     /* Property to erase whitespace between top and background */
     background-position-y: top;

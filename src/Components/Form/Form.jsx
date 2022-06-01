@@ -1,12 +1,35 @@
 import React, {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { validateInputs } from '../../utilities';
+import axios from 'axios';
+
 import './Form.css';
 
 const Form = (props) => {
-  console.log(props.formType, typeof(props.formType))
+
+  let navigate = useNavigate();
+
+  // validations variables
+
+  let validationsError;
+  let passwordLenghtError;
+  let wrongPasswordError;
+
+  // Hooks
 
   const [formType, setFormType] = useState(props.formType || undefined);
-
   const [formDisplay, setFormDisplay] = useState("none");
+
+  const [customMsg, setCustomMsg] = useState("");
+
+  const [loaderDisplay, setLoaderDisplay] = useState(false);
+
+  const [userData, setUserData] = useState({
+    username: "",
+    password: ""
+  });
+
+  
 
   useEffect(() => {
 
@@ -19,10 +42,85 @@ const Form = (props) => {
 
   },[props.displayFromParent, props.formType]);
 
-  console.log("antes del switch...", formType)
+  // Handler function
+
+  const fillForm = (e) => {
+    //Set data
+    setUserData({ ...userData, [e.target.name]: e.target.value })
+
+  }
+
+  // Services
+
+  const Login = async () => {
+
+    let fieldsToValidate = Object.entries(userData);
+    let error = "";
+
+    setCustomMsg("");
+
+    // Validating inputs
+    for (let element of fieldsToValidate) {
+
+      error = validateInputs(element[0], element[1]);
+
+      if (error !== "ok") {
+        setCustomMsg("Fields cannot be empty");
+
+        validationsError = true;
+
+        return
+
+      } else if (error == "ok") {
+        setCustomMsg("");
+
+        validationsError = false;
+      }
+    }
+
+    let body = {
+      username: userData.username,
+      password: userData.password
+    }
+
+    let loginResult;
+
+    if (!validationsError && !wrongPasswordError && !passwordLenghtError) {
+      
+      setLoaderDisplay(true)
+
+      try {
+
+        loginResult = await axios.post("https://socialmeme.herokuapp.com/users/login", body)
+        console.log("we're getting this from database:", loginResult)
+
+        if (loginResult.data.token) {
+          setCustomMsg(`Welcome to the family ${loginResult.data.user.username}!
+          You will be redirected to dashboard`);
+
+          setTimeout(() => {
+
+            navigate("/dashboard")
+
+            // props.dispatch({ type: LOGIN, payload: loginResult.data });
+
+          }, 1800)
+        } else {
+
+          setCustomMsg("Wrong username or password");
+
+          setLoaderDisplay(false);
+        }
+      } catch (loginError) {
+
+        setCustomMsg("There has been a problem with the server, please try again later");
+
+        console.log("Server error", loginError)
+      }
+    }
+  }
 
 switch(formType){
-
 
   case "register":
   return (
