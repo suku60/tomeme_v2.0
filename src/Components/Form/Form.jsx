@@ -4,6 +4,8 @@ import { validateInputs } from '../../utilities';
 import axios from 'axios';
 
 import './Form.css';
+import Notification from '../Notification/Notification';
+import Loader from '../Loader/Loader';
 
 const Form = (props) => {
 
@@ -20,7 +22,7 @@ const Form = (props) => {
   const [formType, setFormType] = useState(props.formType || undefined);
   const [formDisplay, setFormDisplay] = useState("none");
 
-  const [customMsg, setCustomMsg] = useState("");
+  const [customMsg, setCustomMsg] = useState("lore ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, doloremque. Quasi, quisquam, quidem, doloremque. Quasi, quisquam, quidem, doloremque.");
 
   const [loaderDisplay, setLoaderDisplay] = useState(false);
 
@@ -85,7 +87,7 @@ const Form = (props) => {
 
         return
 
-      } else if (error == "ok") {
+      } else if (error === "ok") {
         setCustomMsg("");
 
         validationsError = false;
@@ -141,7 +143,8 @@ switch(formType){
   case "register":
   return (
     <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
-      <div className="box_notification"></div>
+      <Loader/>  
+      <Notification customMsg={customMsg}/>
       <div className="form_container" id="animItemComingFromBottom">
         <button className="close_form_button centered_children" onClick={()=>{setFormDisplay("none")}}>X</button>
         <form className='centered_children'>
@@ -178,12 +181,12 @@ switch(formType){
       </div>
     </div>
   )
-  break;
 
   case "login":
     return (
       <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
-        <div className="box_notification"></div>
+        <Loader/>
+        <Notification customMsg={customMsg}/>
         <div className="form_container" id="animItemComingFromBottom">
           <button 
           className="close_form_button centered_children" 
@@ -209,7 +212,6 @@ switch(formType){
         </div>
       </div>
     )
-  break;
 
   // default is the same as register form now. We'll use this for
   // making the form of "new meme post"
@@ -217,7 +219,8 @@ switch(formType){
   default:
   return (
     <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
-      <div className="box_notification"></div>
+      <Loader/>
+      <Notification customMsg={customMsg}/>
       <div className="form_container" id="animItemComingFromBottom">
         <button 
         className="close_form_button centered_children" 
@@ -256,7 +259,6 @@ switch(formType){
       </div>
     </div>
   )
-  break;
  }
 }
 

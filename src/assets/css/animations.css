@@ -30,7 +30,21 @@
         transform: translateY(0em);
     }
 }
-    
+
+/* ITEM FROM RIGHT TO LEFT */
+#animItemFromRightToLeft {
+    animation: comeFromRight .5s normal;
+}
+
+@keyframes comeFromRight {
+    0% {
+        transform: translateX(101%) ;
+    }
+    100% {
+        transform: translateX(0em);
+    }
+}
+
 /* -- OPACITY */
 
 /* TRANSITION FROM 0 OPACITY TO 1 */

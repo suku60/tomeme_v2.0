@@ -80,7 +80,7 @@ h2 {
     /* margin-top: 5%; */
     text-align: center;
     
-    margin-top: 5%;
+    margin-top: 2%;
 
     letter-spacing: .15em;
 
@@ -93,12 +93,16 @@ h2 {
     font-style: italic;
 }
 
+.subtext_elon {
+    opacity: .7;
+}
+
 .temporaryBtn {
     background-color: whitesmoke;
 
     border-radius: 1.5em;
 
-    height: 3rem;
+    height: 2.7rem;
     width: 9rem;
 
     margin-block: .5em;
@@ -143,7 +147,7 @@ h2 {
 
     }
 
-    .subtext_quote {
+    .subtext_quote, .subtext_elon {
         text-align: left;
         margin-left: 20%;
 
@@ -155,9 +159,8 @@ h2 {
     }
 
 
-    .subtext_quote {
-        /* margin-top: -5%; */
-        /* margin-left: -45%; */
+    .temporaryBtn {
+        height: 2rem;  
     }
 }
 
