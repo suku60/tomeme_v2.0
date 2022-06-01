@@ -33,8 +33,8 @@ const Home = () => {
       <h2 className="welcome_subtext subtext_quote">- Albert Mandela</h2>
       <h2 className="welcome_subtext subtext_join">Join the family</h2>
       <Form displayFromParent={formState} formType={formType}/>
-      {/* <div className="temporaryBtn" onClick={()=>{showForm("login")}}>login</div> */}
-      {/* <div className="temporaryBtn btn_register" onClick={()=>{showForm("register")}}>register</div> */}
+      <div className="temporaryBtn" onClick={()=>{showForm("login")}}>login</div>
+      <div className="temporaryBtn btn_register" onClick={()=>{showForm("register")}}>register</div>
     </div>
   )
 }
