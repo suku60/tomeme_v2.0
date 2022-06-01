@@ -1,3 +1,8 @@
+h2 {
+    margin: 0%;
+
+}
+
 .home {
     background-color: unset;
     background-image: url("../../assets/images/homeMemes.png");
@@ -74,6 +79,8 @@
 .subtext_join {
     /* margin-top: 5%; */
     text-align: center;
+    
+    margin-top: 5%;
 
     letter-spacing: .15em;
 

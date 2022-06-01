@@ -29,9 +29,9 @@ const Home = () => {
       <Form displayFromParent={formState} formType={formType}/>
       <div className="box_home_container">
         <h1 className="welcome_text">Your daily dose of shitposting</h1>
-        <h2 className="welcome_subtext subtext_quote">- Albert Mandela</h2>
-        <h2 className="welcome_subtext subtext_join">In the memory of Harambe</h2>
-        <h2 className="welcome_subtext subtext_join">ELON PLEASE BUY THIS WEBSITE</h2>
+        <h3 className="welcome_subtext subtext_quote">- Albert Mandela</h3>
+        <h2 className="welcome_subtext">In the memory of Harambe</h2>
+        <h2 className="welcome_subtext">ELON PLEASE BUY THIS WEBSITE</h2>
         <h2 className="welcome_subtext subtext_join">Join the family</h2>
         <div className="temporaryBtn centered_children" onClick={()=>{showForm("login")}}>login</div>
         <div className="temporaryBtn btn_register centered_children" onClick={()=>{showForm("register")}}>register</div>

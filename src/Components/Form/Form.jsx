@@ -141,6 +141,7 @@ switch(formType){
   case "register":
   return (
     <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+      <div className="box_notification"></div>
       <div className="form_container" id="animItemComingFromBottom">
         <button className="close_form_button centered_children" onClick={()=>{setFormDisplay("none")}}>X</button>
         <form className='centered_children'>
@@ -182,6 +183,7 @@ switch(formType){
   case "login":
     return (
       <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+        <div className="box_notification"></div>
         <div className="form_container" id="animItemComingFromBottom">
           <button 
           className="close_form_button centered_children" 
@@ -215,6 +217,7 @@ switch(formType){
   default:
   return (
     <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+      <div className="box_notification"></div>
       <div className="form_container" id="animItemComingFromBottom">
         <button 
         className="close_form_button centered_children" 
