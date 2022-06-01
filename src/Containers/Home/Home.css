@@ -13,7 +13,7 @@
 }
 
 .background_sides {
-    background: linear-gradient(90deg, black 10%, transparent, transparent, transparent, black 90%);
+    background: linear-gradient(90deg, hsl(157, 100%, 49%) 10%, transparent, transparent, transparent, hsl(157, 100%, 49%) 90%);
 
     position: absolute;
     z-index: 4;
@@ -26,12 +26,9 @@
     height: 100%;
     width: 100%;
 
-    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(hsl(157, 100%, 54%, .5), hsl(181, 100%, 41%, .5));
     background-color: hsl(157, 100%, 49%, .5);
-    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
-    background-repeat: repeat;
 
-
+    /* Property to erase whitespace between top and background */
     background-position-y: top;
 
     position: absolute;
@@ -69,18 +66,25 @@
 }
 
 .temporaryBtn {
-    background-color: green;
+    background-color: whitesmoke;
 
-    height: 5em;
-    width: 5em;
+    border-radius: 1.5em;
+
+    height: 3rem;
+    width: 9rem;
+
+    margin-block: .5em;
 
     cursor: pointer;
 
     z-index: 7;
 }
 
+.temporaryBtn:hover {
+    background-color: #acacac;
+}
+
 .btn_register {
-    background-color: blue;
 
     top: 50%;
 
