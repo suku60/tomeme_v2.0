@@ -32,7 +32,7 @@
     background-repeat: repeat;
 
 
-    /* background-position-y: top; */
+    background-position-y: top;
 
     position: absolute;
     z-index: 4;
@@ -62,7 +62,8 @@
 }
 
 .subtext_quote {
-    margin-top: -1%;
+    margin-top: -2%;
+
     font-size: 1.2em;
     font-style: italic;
 }
@@ -101,6 +102,11 @@
         margin-inline: 5%;
 
     }
+
+    .subtext_quote {
+        margin-top: -5%;
+        margin-left: -45%;
+    }
 }
 
 /* 600PX WIDTH SCREEN ADAPTIVE MEDIA */
@@ -108,6 +114,15 @@
 
     .home {
         background-position-x: 55%;
+    }
+
+}
+
+/* 400PX WIDTH SCREEN ADAPTIVE MEDIA */
+@media screen and (max-width: 400px) {
+
+    .subtext_quote {
+        margin-left: -25%;
     }
 
 }
