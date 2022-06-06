@@ -1,0 +1,134 @@
+.card {
+
+    background-color: yellow;
+
+    height: var(--card-height-Max);
+    width: 100%;
+
+    max-width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-block: 1.5em;
+ 
+}
+
+.card:first-child {
+    margin-top: 20%;
+}
+
+
+.container_card_img {
+
+    background-color: blue;
+    
+    width: var(--card-height-Max);
+    height: var(--card-height-Max);
+    max-height: var(--card-height-Max);
+
+    margin-block: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow-y: hidden;
+
+}
+
+.container_card_img:first-child {
+    margin-top: 0%;
+}
+
+.img_meme {
+
+    width: 100%;
+    /* max-height: 100%; */
+
+}
+
+.container_card_data {
+
+    background-color: green;
+    height: 100%;
+    width: calc(var(--board-width-Max) - var(--card-height-Max));
+}
+
+
+/* 1200PX WIDTH SCREEN ADAPTIVE MEDIA */
+@media screen and (max-width: 1200px) {
+
+    .card {
+
+        height: var(--card-height-1200px-br);
+     
+    }
+
+    .container_card_img {
+        
+        width: var(--card-height-1200px-br);
+        height: var(--card-height-1200px-br);
+        max-height: var(--card-height-1200px-br);
+    
+    }
+    
+    .container_card_data {
+
+        width: calc(var(--board-width-1200px-br) - var(--card-height-1200px-br));
+    }
+    
+}
+
+/* 800PX WIDTH SCREEN ADAPTIVE MEDIA */
+@media screen and (max-width: 800px) {
+    
+        .card {
+            /* max-width: 100%; */
+            /* not working... can't guess why */
+            /* height: 100vh; */
+            /* padding: 1%; */
+
+            height: fit-content;
+
+            flex-direction: column;
+        
+        }
+
+        .card:first-child {
+            margin-top: 1%;
+        }
+    
+        .container_card_img {
+            
+            /* width: 100%; */
+            /* height: 50em; */
+            height: var(--card-height-600px-br);
+            /* max-height: var(--card-height-600px-br); */
+
+            margin-block: 0em;
+        
+        }
+        
+        .container_card_data {
+
+            position: absolute;
+    
+            width: 100%;
+
+            height: 40vh;
+        }
+        
+}
+
+/* 600PX WIDTH SCREEN ADAPTIVE MEDIA */
+@media screen and (max-width: 600px) {
+}
+
+/* 400PX WIDTH SCREEN ADAPTIVE MEDIA */
+@media screen and (max-width: 400px) {
+
+}

@@ -17,12 +17,24 @@
 /* POSITIONING */
 /* centered children */
 
-.centered_children {
+.centered_content {
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.left_content {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 0%;
+  box-sizing: border-box;
 
 }
 
@@ -43,9 +55,12 @@
 .board {
     background-color: red;
 
-    width: 60%;
+    width: var(--board-width-Max);
     height: 100%;
 
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-base-color: transparent;
 }
 
 /* 1200PX WIDTH SCREEN ADAPTIVE MEDIA */
@@ -53,7 +68,7 @@
 @media screen and (max-width: 1200px) {
     .board {
         margin-left: 15%;
-        width: 80%;
+        width: var(--board-width-1200px-br);
     }
 }
 
@@ -63,7 +78,7 @@
   .board {
       margin-left: 0%;
       left: 0%;
-      width: 100%;
+      width: var(--board-width-600px-br);
   }
 }
 

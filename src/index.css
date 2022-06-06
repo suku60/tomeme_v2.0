@@ -7,7 +7,14 @@
   --border-rad-1: .2em;
   --border-rad-2: .4em;
   --border-rad-3: .6em;
+
+  --board-width-Max: 60vw;
+  --board-width-1200px-br: 80vw;
+  --board-width-600px-br: 100vw;
   
+  --card-height-Max: 38vw;
+  --card-height-1200px-br: 45vw;
+  --card-height-600px-br: 100vw;
 }
 
 

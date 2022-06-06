@@ -29,8 +29,7 @@
     left: 0%;
     z-index: 12;
 
-
-    background-color: green;
+    background-image: url("../../assets/svg/CloseNotification.svg");
 
     height: 100%;
     width: 5%;

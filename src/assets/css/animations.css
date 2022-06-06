@@ -54,9 +54,33 @@
 
 @keyframes reverseFade {
     0% {
+        opacity: 1;
+    }
+    50% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* CONSTANT CHANGE OF OPACITY FROM 0 TO 1 */
+#animConstantOpacityChange {
+    animation: reverseFade 2s infinite normal;
+    /* animation-delay: 7s; */
+}
+
+
+/* ROTATIONS */
+#animLoader {
+    animation: loaderRotation 200s reverse linear infinite;
+}
+
+@keyframes loaderRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

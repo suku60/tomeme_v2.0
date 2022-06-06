@@ -3,7 +3,7 @@ import './Notification.css';
 
 const Notification = (props) => {
 
-  const [notificationDisplay, setNotificationDisplay] = useState("flex");
+  const [notificationDisplay, setNotificationDisplay] = useState("none");
 
   const hideNotification = () => {
     if(notificationDisplay === "flex"){

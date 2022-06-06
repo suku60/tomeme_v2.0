@@ -1,5 +1,5 @@
 .box_loader {
-    background-color: hsl(0, 0%, 0%, .5);
+    background-color: hsl(0, 0%, 0%, .8);
 
     position: absolute;
     top: 0%;
@@ -10,9 +10,35 @@
 }
 
 .loader {
-    background-image: url(../../assets/svg/Trollface.svg);
+    background-color: transparent;
 
-    height: 10vh;
-    width: 10vh;
+    height: 19vh;
+    width: 19vh;
+
+    display: grid;
+    grid-template-rows:    repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
+
+.full {
+    background-color: blue;
+
+    border-radius: 50%;
+    transition: .5s;
+
+    margin: .05em;
+    
+}
+
+.full:hover {
+    background-color: transparent;
+    transition: .5s;
+}
+
+.empty {
+    background-color: transparent;
+
+
+}
+
 

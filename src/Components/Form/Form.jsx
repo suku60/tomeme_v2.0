@@ -21,6 +21,7 @@ const Form = (props) => {
 
   const [formType, setFormType] = useState(props.formType || undefined);
   const [formDisplay, setFormDisplay] = useState("none");
+  const [notificationDisplay, setNotificationDisplay] = useState("none");
 
   const [customMsg, setCustomMsg] = useState("lore ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, doloremque. Quasi, quisquam, quidem, doloremque. Quasi, quisquam, quidem, doloremque.");
 
@@ -142,12 +143,12 @@ switch(formType){
 
   case "register":
   return (
-    <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+    <div className='box_form centered_content' id="animReverseFade" style={{display: formDisplay}}>
       <Loader/>  
-      <Notification customMsg={customMsg}/>
+      <Notification notificationDisplay={notificationDisplay} customMsg={customMsg}/>
       <div className="form_container" id="animItemComingFromBottom">
-        <button className="close_form_button centered_children" onClick={()=>{setFormDisplay("none")}}>X</button>
-        <form className='centered_children'>
+        <button className="close_form_button centered_content" onClick={()=>{setFormDisplay("none")}}>X</button>
+        <form className='centered_content'>
           <h1>Create your account</h1>
           <input 
           onChange={(e) => { fillForm(e) }} 
@@ -184,14 +185,14 @@ switch(formType){
 
   case "login":
     return (
-      <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+      <div className='box_form centered_content' id="animReverseFade" style={{display: formDisplay}}>
         <Loader/>
-        <Notification customMsg={customMsg}/>
+        <Notification notificationDisplay={notificationDisplay} customMsg={customMsg}/>
         <div className="form_container" id="animItemComingFromBottom">
           <button 
-          className="close_form_button centered_children" 
+          className="close_form_button centered_content" 
           onClick={()=>{setFormDisplay("none")}}>X</button>
-          <form className='centered_children'>
+          <form className='centered_content'>
             <h1>Login with your account</h1>
             <input 
           onChange={(e) => { fillForm(e) }} 
@@ -218,14 +219,14 @@ switch(formType){
   
   default:
   return (
-    <div className='box_form centered_children' id="animReverseFade" style={{display: formDisplay}}>
+    <div className='box_form centered_content' id="animReverseFade" style={{display: formDisplay}}>
       <Loader/>
-      <Notification customMsg={customMsg}/>
+      <Notification notificationDisplay={notificationDisplay} customMsg={customMsg}/>
       <div className="form_container" id="animItemComingFromBottom">
         <button 
-        className="close_form_button centered_children" 
+        className="close_form_button centered_content" 
         onClick={()=>{setFormDisplay("none")}}>X</button>
-        <form className='centered_children'>
+        <form className='centered_content'>
           <h1>Create your account DEFAULT</h1>
           <input 
           onChange={(e) => { fillForm(e) }} 
